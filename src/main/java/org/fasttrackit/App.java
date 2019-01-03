@@ -1,59 +1,67 @@
 package org.fasttrackit;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.lang.String;
 
 
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        Adopter adopter = new Adopter();
-        adopter.adopterName = "Viorel Bercea";
-        adopter.availableMoney = 500.25;
-        System.out.println("Adopter name: " + adopter.adopterName);
-        System.out.println("Availabe money: "+ adopter.availableMoney);
+        Adopter firstAdopter = new Adopter();
+        firstAdopter.adopterName = "Viorel Bercea";
+        firstAdopter.availableMoney = 500.25;
+        System.out.println("Adopter name: " + firstAdopter.adopterName);
+        System.out.println("Availabe money: "+ firstAdopter.availableMoney);
 
-        Animal animal = new Animal();
-        animal.animalName = "Foxy";
-        animal.healthLevel = 6;
-        animal.spiritLevel = 9;
-        animal.food = "Junior Canin";
-        animal.activities = "Running after ball";
-        System.out.println("Animal name: " + animal.animalName);
-        System.out.println("Health level: " + animal.healthLevel);
-        System.out.println("Spirit level: " + animal.spiritLevel);
-        System.out.println("Food: " + animal.food);
-        System.out.println("Activities: " + animal.activities);
-
-
-
-
+        Animal firstAnimal = new Animal();
+        firstAnimal.animalName = "Foxy";
+        firstAnimal.healthLevel = 6;
+        firstAnimal.spiritLevel = 9;
+        firstAnimal.food = "Junior Canin";
+        firstAnimal.activities = "Running after ball";
+        System.out.println("Animal name: " + firstAnimal.animalName);
+        System.out.println("Health level: " + firstAnimal.healthLevel);
+        System.out.println("Spirit level: " + firstAnimal.spiritLevel);
+        System.out.println("Food: " + firstAnimal.food);
+        System.out.println("Activities: " + firstAnimal.activities);
 
 
         AnimalFood animalFood = new AnimalFood();
         animalFood.favoriteAnimalFoodName = "Royal Canin";
         animalFood.foodPrice = 18.68;
-//        SimpleDateFormat date = new SimpleDateFormat("ddmm/yyyy");
-//        date = "25/12/2020";
-        animalFood.inStock = true;
+        animalFood.year = LocalDateTime.now();
+
+
         System.out.println("Favorite animal food name: " + animalFood.favoriteAnimalFoodName);
         System.out.println("Food price: " + animalFood.foodPrice);
         System.out.println("In stock: " + animalFood.inStock);
 
-        Veterinary veterinary = new Veterinary();
-        veterinary.veterinayName = "Mark Goldenberg";
-        veterinary.specialization = "Dogs specialization";
-        System.out.println("Veterinary name: " + veterinary.veterinayName);
-        System.out.println("Specialization" +
-                ": " + veterinary.specialization);
+
+        Veterinary firstVeterinary = new Veterinary();
+        firstVeterinary.veterinayName = "Mark Goldenberg";
+        firstVeterinary.specialization = "Dogs specialization";
+        System.out.println("Veterinary name: " + firstVeterinary.veterinayName);
+        System.out.println("Specialization" + ": " + firstVeterinary.specialization);
+
 
         Game game = new Game();
-        game.name = "Vlad Pop";
-        System.out.println(game.name);
+        game.adopter = firstAdopter ;
+        System.out.println(game.adopter);
+        game.veterinaryName = firstVeterinary;
+        game.dog = firstAnimal;
 
-        adopter.adopterrrr = game;
-        ((Game) adopter.adopterrrr).name=
+
+        Pet firstPet = new Pet();
+        firstPet.inHouse = true;
+
+        
+        Dog FirstDog = new Dog();
+        FirstDog.barking = true;
+        System.out.println("The dog is barking: " + FirstDog.barking);
+
+
+
+
 
 
 

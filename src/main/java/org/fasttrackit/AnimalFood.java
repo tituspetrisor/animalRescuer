@@ -1,10 +1,11 @@
 package org.fasttrackit;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class AnimalFood {
     String favoriteAnimalFoodName;
     double foodPrice;
-    Date date;
+    LocalDateTime year;
     boolean inStock;
 }
