@@ -1,11 +1,27 @@
 package org.fasttrackit;
 
 public class Adopter {
-    String adopterName;
-    Double availableMoney;
+   private String adopterName;
+   private Double availableMoney;
 
-    public Adopter(String adopterName, Double availableMoney) {
+//    public Adopter(String adopterName, Double availableMoney) {
+//        this.adopterName = adopterName;
+//        this.availableMoney = availableMoney;
+//    }
+
+    public String getAdopterName() {
+        return adopterName;
+    }
+
+    public void setAdopterName(String adopterName) {
         this.adopterName = adopterName;
+    }
+
+    public Double getAvailableMoney() {
+        return availableMoney;
+    }
+
+    public void setAvailableMoney(Double availableMoney) {
         this.availableMoney = availableMoney;
     }
 }

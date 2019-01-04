@@ -1,4 +1,5 @@
 package org.fasttrackit;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.lang.String;
 
@@ -7,35 +8,79 @@ public class App
 {
     public static void main( String[] args )
     {
-        Adopter firstAdopter = new Adopter("Viorel Bercea", 500.25);
-//
-        System.out.println("Adopter name: " + firstAdopter.adopterName);
-        System.out.println("Availabe money: "+ firstAdopter.availableMoney);
+        Adopter firstAdopter = new Adopter();
+        firstAdopter.setAdopterName("Viorel Bercea");
+        firstAdopter.setAvailableMoney(500.25    );
 
-        Animal firstAnimal = new Animal("Foxy", 6, 7, 9,"Junior Canin", "Running after ball");
+        System.out.println("Adopter name: " + firstAdopter.getAdopterName());
+        System.out.println("Availabe money: "+ firstAdopter.getAvailableMoney());
 
-        System.out.println("Animal name: " + firstAnimal.animalName);
-        System.out.println("Health level: " + firstAnimal.healthLevel);
-        System.out.println("Spirit level: " + firstAnimal.spiritLevel);
-        System.out.println("Food: " + firstAnimal.food);
-        System.out.println("Activities: " + firstAnimal.activities);
+        Animal firstAnimal = new Animal();
 
+        firstAnimal.setAnimalName("Foxy");
+        firstAnimal.setHealthLevel(6);
+        firstAnimal.setSpiritLevel(7);
+        firstAnimal.setFood("Junior Canin");
+        firstAnimal.setActivities("Running after ball");
 
-        AnimalFood animalFood = new AnimalFood("Royal Canin", 18.68, 2020, true);
-        System.out.println("Favorite animal food name: " + animalFood.favoriteAnimalFoodName);
-        System.out.println("Food price: " + animalFood.foodPrice);
-        System.out.println("Epiry date: " + animalFood.year);
-        System.out.println("In stock: " + animalFood.inStock);
-
-
-        Veterinary firstVeterinary = new Veterinary("Mark Goldenberg","Dogs specialization" );
-        System.out.println("Veterinary name: " + firstVeterinary.veterinayName);
-        System.out.println("Specialization: " + firstVeterinary.specialization);
+        System.out.println("Animal name: " + firstAnimal.getAnimalName());
+        System.out.println("Health level: " + firstAnimal.getHealthLevel());
+        System.out.println("Spirit level: " + firstAnimal.getSpiritLevel());
+        System.out.println("Food: " + firstAnimal.getFood());
+        System.out.println("Activities: " + firstAnimal.getActivities());
 
 
-        Dog FirstDog = new Dog("Bingo", 8, 9, 9, "Royal Canin", "Washing", true,true);
-        FirstDog.barking = true;
-        System.out.println("The dog is barking: " + FirstDog.barking);
+        AnimalFood animalFood = new AnimalFood();
+
+        animalFood.setFavoriteAnimalFoodName("Royal Canin");
+        animalFood.setFoodPrice(18.68);
+        animalFood.setYear(LocalDate.of(2020, 12, 12));
+        animalFood.setInStock(true);
+
+        System.out.println("Favorite animal food name: " + animalFood.getFavoriteAnimalFoodName());
+        System.out.println("Food price: " + animalFood.getFoodPrice());
+        System.out.println("Expiry date: " + animalFood.getYear());
+        System.out.println("It is in stock: " + animalFood.getInInStock());
+
+
+        Veterinary firstVeterinary = new Veterinary();
+
+        firstVeterinary.setVeterinayName("Mark Goldenberg");
+        firstVeterinary.setSpecialization("Dogs specialization");
+        System.out.println("Veterinary name: " + firstVeterinary.getVeterinayName());
+        System.out.println("Specialization: " + firstVeterinary.getSpecialization());
+
+
+        Dog firstDog = new Dog();
+
+        firstDog.setAnimalName("Bingo");
+        firstDog.setHealthLevel(8);
+        firstDog.setHealthLevel(9);
+        firstDog.setSpiritLevel(8);
+        firstDog.setFood("Royal Canin");
+        firstDog.setActivities("Washing");
+        firstDog.setBarking(true);
+        firstDog.setInHouse(true);
+
+        System.out.println("Dogs name: " + firstDog.getAnimalName());
+        System.out.println("Health level: " + firstDog.getHealthLevel());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
