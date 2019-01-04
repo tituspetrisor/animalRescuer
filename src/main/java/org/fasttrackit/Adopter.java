@@ -24,4 +24,12 @@ public class Adopter {
     public void setAvailableMoney(Double availableMoney) {
         this.availableMoney = availableMoney;
     }
+
+    public void feding(Animal animal, AnimalFood animalFood){
+
+        System.out.println(adopterName + " just gave some " + animalFood.favoriteAnimalFoodName+ " food to " + animal.animalName + ".");
+    }
+    public void recreation(Animal animal, RecreationActivity activity){
+        System.out.println(adopterName + " go out with " + animal.animalName + " to " + activity.activityname + ".");
+    }
 }

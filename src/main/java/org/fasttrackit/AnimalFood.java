@@ -3,7 +3,7 @@ package org.fasttrackit;
 import java.time.LocalDate;
 
 public class AnimalFood {
-   private  String favoriteAnimalFoodName;
+   protected   String favoriteAnimalFoodName;
    private double foodPrice;
    private LocalDate year;
    private boolean inStock;

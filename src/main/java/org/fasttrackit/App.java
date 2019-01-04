@@ -51,6 +51,10 @@ public class App
         System.out.println("Specialization: " + firstVeterinary.getSpecialization());
 
 
+        RecreationActivity firstActivity =new RecreationActivity();
+        firstActivity.setActivityname("playing with balls");
+
+
         Dog firstDog = new Dog();
 
         firstDog.setAnimalName("Bingo");
@@ -64,6 +68,9 @@ public class App
 
         System.out.println("Dogs name: " + firstDog.getAnimalName());
         System.out.println("Health level: " + firstDog.getHealthLevel());
+
+        firstAdopter.feding(firstAnimal, animalFood);
+        firstAdopter.recreation(firstAnimal, firstActivity);
 
 
 
