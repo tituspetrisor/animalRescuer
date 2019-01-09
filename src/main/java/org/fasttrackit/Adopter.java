@@ -27,9 +27,9 @@ public class Adopter {
 
     public void feding(Animal animal, AnimalFood animalFood){
 
-        System.out.println(adopterName + " just gave some " + animalFood.favoriteAnimalFoodName+ " food to " + animal.animalName + ".");
+        System.out.println(getAdopterName() + " just gave some " + animalFood.getFavoriteAnimalFoodName()+ " food to " + animal.getAnimalName() + ".");
     }
     public void recreation(Animal animal, RecreationActivity activity){
-        System.out.println(adopterName + " go out with " + animal.animalName + " to " + activity.activityname + ".");
+        System.out.println(getAdopterName() + " go out with " + animal.getAnimalName() + " to " + activity.getActivityname() + ".");
     }
 }
