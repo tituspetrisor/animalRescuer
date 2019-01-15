@@ -15,4 +15,11 @@ public class Dog extends Pet{
     public void setBarking(boolean barking) {
         this.barking = barking;
     }
+    @Override
+    public void showSpiritLevel(int spiritLevel){
+        System.out.println("Spirit level is: " + spiritLevel + " and the dog is fawn.");
+    }
+
+
+
 }

@@ -72,6 +72,14 @@ public class App
         firstAdopter.feding(firstAnimal, animalFood);
         firstAdopter.recreation(firstAnimal, firstActivity);
 
+        Animal secondAnimal = new Animal();
+        secondAnimal.showSpiritLevel(8);
+        
+        firstDog.showSpiritLevel(6);
+
+        Cat firstCat = new Cat();
+        firstCat.showSpiritLevel(9);
+
 
 
 

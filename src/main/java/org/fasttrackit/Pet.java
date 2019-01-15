@@ -15,5 +15,9 @@ public class Pet extends Animal{
     public void setInHouse(boolean inHouse) {
         this.inHouse = inHouse;
     }
+    @Override
+    public void showSpiritLevel(int spiritLevel){
+        System.out.println("Spirit level is: " + spiritLevel);
+    }
 }
 
