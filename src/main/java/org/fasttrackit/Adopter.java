@@ -27,9 +27,16 @@ public class Adopter {
 
     public void feding(Animal animal, AnimalFood animalFood){
 
-        System.out.println(getAdopterName() + " just gave some " + animalFood.getFavoriteAnimalFoodName()+ " food to " + animal.getAnimalName() + ".");
+        System.out.println("Initial hungry level is: " + animal.getHungryLevel());
+        animal.hungryLevel --;
+        System.out.println(getAdopterName() + " just gave some " + animalFood.getFavoriteAnimalFoodName()+ " food to " + animal.getAnimalName() + "and " +
+                " and the current level is: " + animal.getHungryLevel() + ".");
+                animal.hungryLevel --;
     }
     public void recreation(Animal animal, RecreationActivity activity){
-        System.out.println(getAdopterName() + " go out with " + animal.getAnimalName() + " to " + activity.getActivityname() + ".");
+        System.out.println("Initial happines level is: " + animal.getSpiritLevel());
+        animal.spiritLevel++;
+        System.out.println(getAdopterName() + " go out with " + animal.getAnimalName() + " to " + activity.getActivityname() + " and the current " +
+                "spirit level is: " + animal.getSpiritLevel() + ".");
     }
 }

@@ -69,7 +69,10 @@ public class App
         System.out.println("Dogs name: " + firstDog.getAnimalName());
         System.out.println("Health level: " + firstDog.getHealthLevel());
 
+        firstAnimal.setHungryLevel(5);
         firstAdopter.feding(firstAnimal, animalFood);
+
+        firstAnimal.setSpiritLevel(7);
         firstAdopter.recreation(firstAnimal, firstActivity);
 
         Animal secondAnimal = new Animal();
