@@ -74,14 +74,17 @@ public class App
 
         Animal secondAnimal = new Animal();
         secondAnimal.setAnimalName("Frufru");
-        secondAnimal.showSpiritLevel(7, secondAnimal);
+        secondAnimal.setSpiritLevel(7);
+        secondAnimal.showSpiritLevel(secondAnimal, secondAnimal);
 
         firstDog.setAnimalName("Pitu");
-        firstDog.showSpiritLevel(6, firstDog);
+        firstDog.setSpiritLevel(9);
+        firstDog.showSpiritLevel(firstDog, firstDog);
 
         Cat firstCat = new Cat();
         firstCat.setAnimalName("Elvi");
-        firstCat.showSpiritLevel(9, firstCat);
+        firstCat.setSpiritLevel(10);
+        firstCat.showSpiritLevel(firstCat, firstCat);
 
 
 
