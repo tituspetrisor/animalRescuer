@@ -16,8 +16,8 @@ public class Pet extends Animal{
         this.inHouse = inHouse;
     }
     @Override
-    public void showSpiritLevel(Animal spiritLevel, Animal animal){
-        System.out.println(animal.getAnimalName() + " spirit level is: " + animal.getSpiritLevel());
+    public void showSpiritLevel(Animal spiritLevel){
+        System.out.println(getAnimalName() + " spirit level is: " + spiritLevel.getSpiritLevel());
     }
 }
 
