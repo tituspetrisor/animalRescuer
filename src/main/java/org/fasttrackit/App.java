@@ -73,12 +73,16 @@ public class App
         firstAdopter.recreation(firstAnimal, firstActivity);
 
         Animal secondAnimal = new Animal();
-        secondAnimal.showSpiritLevel(8);
-        
-        firstDog.showSpiritLevel(6);
+        secondAnimal.setAnimalName("Frufru");
+        secondAnimal.showSpiritLevel(7, secondAnimal);
+
+        firstDog.setAnimalName("Pitu");
+        firstDog.showSpiritLevel(6, firstDog);
 
         Cat firstCat = new Cat();
-        firstCat.showSpiritLevel(9);
+        firstCat.setAnimalName("Elvi");
+        firstCat.showSpiritLevel(9, firstCat);
+
 
 
 

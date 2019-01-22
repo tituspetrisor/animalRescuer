@@ -68,8 +68,8 @@ public class Animal {
     public void setActivities(String activities) {
         this.activities = activities;
     }
-    public void showSpiritLevel(int spiritLevel){
-             System.out.println("Spirit level is: " + spiritLevel);
+    public void showSpiritLevel(int spiritLevel, Animal animal){
+             System.out.println("Spirit level is: " + spiritLevel +" and his name is " + animal.getAnimalName());
     }
 
 

@@ -16,8 +16,8 @@ public class Dog extends Pet{
         this.barking = barking;
     }
     @Override
-    public void showSpiritLevel(int spiritLevel){
-        System.out.println("Spirit level is: " + spiritLevel + " and the dog is fawn.");
+    public void showSpiritLevel(int spiritLevel, Animal animal){
+        System.out.println(animal.getAnimalName() + "'s level is: " + spiritLevel + " and the dog is fawn.");
     }
 
 
