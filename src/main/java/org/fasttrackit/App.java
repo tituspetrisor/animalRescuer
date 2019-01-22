@@ -69,23 +69,26 @@ public class App
         System.out.println("Dogs name: " + firstDog.getAnimalName());
         System.out.println("Health level: " + firstDog.getHealthLevel());
 
-        firstAnimal.setFood("Royal Canin");
-        firstAnimal.setSpiritLevel(7);
-        firstAnimal.setHungryLevel(5);
+
+
+        Animal dog = new Dog();
+        dog.setFood("Royal Canin");
+        dog.setSpiritLevel(7);
+        dog.setHungryLevel(5);
         firstAdopter.feding(firstAnimal, animalFood);
 
-        firstAnimal.setSpiritLevel(7);
-        firstAnimal.setActivities("sa with balls");
+        dog.setSpiritLevel(7);
+        dog.setActivities("sa with balls");
         firstAdopter.recreation(firstAnimal, firstActivity);
 
-        Animal secondAnimal = new Animal();
-        secondAnimal.setAnimalName("Frufru");
-        secondAnimal.setSpiritLevel(7);
-        secondAnimal.showSpiritLevel(secondAnimal);
+//        Animal secondAnimal = new Animal();
+        dog.setAnimalName("Frufru");
+        dog.setSpiritLevel(7);
+        dog.showSpiritLevel(dog);
 
-        firstDog.setAnimalName("Pitu");
-        firstDog.setSpiritLevel(9);
-        firstDog.showSpiritLevel( firstDog);
+        dog.setAnimalName("Pitu");
+        dog.setSpiritLevel(9);
+        dog.showSpiritLevel( firstDog);
 
         Cat firstCat = new Cat();
         firstCat.setAnimalName("Elvi");
