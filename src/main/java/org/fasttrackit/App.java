@@ -96,6 +96,10 @@ public class App
         firstCat.showSpiritLevel( firstCat);
 
 
+        Game game = new Game();
+        game.start();
+        
+
 
 
 

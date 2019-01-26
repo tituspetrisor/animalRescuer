@@ -3,15 +3,15 @@ package org.fasttrackit;
 import java.time.LocalDate;
 
 public class AnimalFood {
-   protected String favoriteAnimalFoodName;
-   private double foodPrice;
-   private LocalDate year;
-   private boolean inStock;
+    protected String favoriteAnimalFoodName;
+    protected double foodPrice;
+    protected LocalDate year;
+    protected boolean inStock;
 
-//    public AnimalFood(String favoriteAnimalFoodName, double foodPrice, int year, boolean inStock) {
+//    public AnimalFood(String favoriteAnimalFoodName, double foodPrice, boolean inStock) {
 //        this.favoriteAnimalFoodName = favoriteAnimalFoodName;
 //        this.foodPrice = foodPrice;
-//        this.year = year;
+////        this.year = year;
 //        this.inStock = inStock;
 //    }
 

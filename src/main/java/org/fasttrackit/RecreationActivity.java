@@ -1,7 +1,7 @@
 package org.fasttrackit;
 
 public class RecreationActivity {
-    protected String activityname;
+    public String activityname;
 
     public String getActivityname() {
         return activityname;
