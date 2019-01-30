@@ -13,7 +13,7 @@ public class Game {
     private List<AnimalFood> availableFood = new ArrayList<>();
     private RecreationActivity[] availableActivities = new RecreationActivity[15];
 
-
+//
 //    public Game(Adopter adopter, Animal dog, Veterinary veterinaryName) {
 //        this.adopter = adopter;
 //        this.dog = dog;
