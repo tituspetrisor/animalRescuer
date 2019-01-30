@@ -6,8 +6,7 @@ import java.lang.String;
 
 public class App
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args )  {
         Adopter firstAdopter = new Adopter();
         firstAdopter.setAdopterName("Viorel Bercea");
         firstAdopter.setAvailableMoney(500.25    );
