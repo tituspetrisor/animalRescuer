@@ -17,8 +17,6 @@ public class App
 
 
 
-
-
 //        Adopter firstAdopter = new Adopter();
 //        firstAdopter.setAdopterName("Viorel Bercea");
 //        firstAdopter.setAvailableMoney(500.25    );
