@@ -44,15 +44,11 @@ public class Game {
         this.veterinaryName = veterinaryName;
     }
 
+    Animal chosenAnimal = new Animal();
 
-    private void initAnimal() {
+
+    public void initAnimal() {
         System.out.println("Please select your favorite animal: dog or cat ");
-
-        Animal doggy = new Dog();
-//        doggy.setAnimalName("Pitu");
-
-        Animal catty = new Cat();
-//        catty.setAnimalName("Elvis");
 
         Scanner scanner = new Scanner(System.in);
         String chosenAnimal = scanner.next();
@@ -64,28 +60,23 @@ public class Game {
             } else {
                 System.out.println("Please try again");
                 initAnimal();
-
             }
-
         }
-
-
     }
 
     private void nameAnimal() {
         System.out.println("Now please choose a name for yout pet");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.next();
+        chosenAnimal.setAnimalName(name);
         System.out.println("Your animal's name is: " + name);
     }
-
 
     private void initFood() {
 
         AnimalFood animalFood = new AnimalFood();
         AnimalFood animalFood2 = new AnimalFood();
         AnimalFood animalFood3 = new AnimalFood();
-
 
         animalFood.setFavoriteAnimalFoodName("1 - Canin");
         availableFood.add(animalFood);
@@ -95,40 +86,56 @@ public class Game {
 
         animalFood3.setFavoriteAnimalFoodName("3 - Junior Canin");
         availableFood.add(animalFood3);
-
     }
 
     private void requireFeeding() {
-//        System.out.println(animalFood.getFavoriteAnimalFoodName() + "\n" + animalFood2.getFavoriteAnimalFoodName() + "\n" + animalFood3.getFavoriteAnimalFoodName());
+        initFood();
         displayFoods();
-        System.out.println("Please choose your pets favorie food from above (choose the number associate with the food) " +
+        System.out.println("Please choose your pets food from above (choose the number associate with the food) " +
                 "or you can type his favorite food: ");
         Scanner scanner = new Scanner(System.in);
         String userInputFood = scanner.next();
 
         if (userInputFood.equals("1") || userInputFood.equals("2") || userInputFood.equals("3")) {
             if (userInputFood.equals("1")) {
-                System.out.println("Your pet's favorite food will be: Canin. ");
+                System.out.println("Your pets food will be: Canin. ");
             }
             if (userInputFood.equals("2")) {
-                System.out.println("Your pet's favorite food will be: Meat balls. ");
+                System.out.println("Your pets  food will be: Meat balls. ");
             }
             if (userInputFood.equals("3")) {
-                System.out.println("Your pet's favorite food will be: Junior Canin");
+                System.out.println("Your pets food will be: Junior Canin");
             }
         } else {
             AnimalFood food = new AnimalFood();
             initFood();
             food.setFavoriteAnimalFoodName(userInputFood);
             availableFood.add(food);
-            System.out.println("His favorie food will be: " + food.getFavoriteAnimalFoodName());
-
-
+            System.out.println("His food will be: " + food.getFavoriteAnimalFoodName());
         }
-
-
     }
 
+    private void requireActivity() {
+        initActivities();
+        displayAllActivities();
+        System.out.println("Please choose activity for your pet from above or you can type an activity for your per: ");
+
+        Scanner scanner = new Scanner(System.in);
+        String userInputActivity = scanner.next();
+        if (userInputActivity.equals("Sleeping")) {
+            System.out.println("Pets activity will be " + availableActivities[0]);
+        }
+        if (userInputActivity.equals("Running")) {
+            System.out.println("Pets activity will be: " + availableActivities[1]);
+        } else {
+            RecreationActivity recreationActivity = new RecreationActivity();
+            initActivities();
+            recreationActivity.setActivityname(userInputActivity);
+            availableActivities[2] = new RecreationActivity();
+            availableActivities[2] = recreationActivity;
+            System.out.println("Pets activity will be: " + recreationActivity.getActivityname());
+        }
+    }
 
     public static boolean isNumeric(String str) {
         for (char c : str.toCharArray()) {
@@ -152,9 +159,7 @@ public class Game {
             System.out.println("Please try again (expected string)");
             initRescuer();
         }
-
     }
-
 
     private void initActivities() {
         RecreationActivity recreationActivity = new RecreationActivity();
@@ -170,30 +175,16 @@ public class Game {
     }
 
 
-    public void start() {
-        initActivities();
-//            displayAllActivities();
-        initAnimal();
-        nameAnimal();
-        initRescuer();
-        initFood();
-        requireFeeding();
-//        displayFoods();
-
-
-    }
-
     public void displayFoods() {
         for (int i = 0; i < availableFood.size(); i++) {
             if (availableFood != null) {
                 System.out.println(availableFood.get(i).getFavoriteAnimalFoodName());
-
             }
         }
     }
 
     public void displayAllActivities() {
-        System.out.println("All activities: ");
+        System.out.println("All activities are: ");
         for (RecreationActivity activity : availableActivities) {
             if (activity != null) {
                 System.out.println(activity.getActivityname());
@@ -201,6 +192,27 @@ public class Game {
         }
     }
 
+    public void entireGame() {
+        Animal chosenAnimal = new Animal();
+        chosenAnimal.setSpiritLevel(0);
+        chosenAnimal.setHungryLevel(0);
+        System.out.println("After you choose your pets charactisitc you have to play with him :) ");
+        System.out.println("Initial spirit level is " + chosenAnimal.getSpiritLevel() + " and you have to make him happy until 9 spirit level");
+        System.out.println("Initial hunger level is " + chosenAnimal.getHungryLevel() + " and you have to make him happy until 8 hunger level");
+        while (chosenAnimal.spiritLevel <= 9 && chosenAnimal.hungryLevel <= 8) {
+            requireActivity();
+            requireFeeding();
+            chosenAnimal.spiritLevel++;
+            chosenAnimal.hungryLevel++;
+            System.out.println("YOU WON THE GAME AND THE PET LOVES YOU");
+        }
+    }
 
+    public void start() {
+        initAnimal();
+        nameAnimal();
+        initRescuer();
+        entireGame();
+    }
 }
 
